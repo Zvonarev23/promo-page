@@ -1,0 +1,108 @@
+.library {
+  padding-bottom: 150px;
+}
+
+.sectionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 51px;
+}
+
+.title {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.chip {
+  margin-bottom: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 27px;
+}
+
+.button {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 3px solid $color_white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    transition: border-color $transition_speed $transition_animation;
+  }
+}
+
+.icon {
+  width: 14px;
+  height: 21px;
+  color: rgba(255, 255, 255, 1);
+  transition: color $transition_speed $transition_animation;
+}
+
+.leftIcon {
+  margin-left: -4px;
+}
+
+.rightIcon {
+  margin-left: 4px;
+}
+
+.button:hover .icon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1161px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 720px) {
+  .library {
+    padding-top: 100px;
+  }
+
+  .buttonContainer {
+    display: none;
+  }
+
+  .sectionTop {
+    display: block;
+    text-align: center;
+  }
+
+  .chip {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 560px) {
+  .library {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+}

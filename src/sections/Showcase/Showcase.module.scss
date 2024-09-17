@@ -1,0 +1,134 @@
+.showcase {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/images/main-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  padding: 45px;
+  border-radius: 50px;
+  background-color: $bg_color;
+  mask: url('../../assets/images/card-background.svg') no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask: url('../../assets/images/card-background.svg') no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}
+
+.title {
+  max-width: 360px;
+  margin-bottom: 140px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.number {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 70px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.description {
+  color: $color-muted-white;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@media (max-width: 1061px) {
+  .title {
+    max-width: 330px;
+    margin-bottom: 120px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .number {
+    margin-bottom: 26px;
+    font-size: 62px;
+    line-height: 50px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 960px) {
+  .card {
+    padding: 40px;
+    max-width: 450px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 40px;
+    max-width: 380px;
+  }
+
+  .title {
+    max-width: 270px;
+    margin-bottom: 31px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .number {
+    margin-bottom: 12px;
+    order: -1;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    text-align: center;
+    padding: 40px;
+    max-width: 380px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    padding: 25px;
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,510 @@
+@import '@assets/styles/animations.scss';
+
+.main {
+  margin-top: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 125px;
+  background: radial-gradient(circle, #55e2af 0%, #002a6a 100%);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  isolation: isolate;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: url('../../assets/images/girl.png') top center no-repeat;
+    opacity: 0;
+    animation: fadeInImage 1s ease-out forwards;
+  }
+}
+
+.decorationLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bg_color;
+  width: 220px;
+  height: 82px;
+  border-bottom-right-radius: 50px 50px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    background-color: transparent;
+    box-shadow: -10px -10px 0 10px $bg_color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 46px;
+    height: 40px;
+    border-top-left-radius: 50px;
+    background-color: transparent;
+    box-shadow: -10px -10px 0 10px $bg_color;
+  }
+}
+
+.decorationRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $bg_color;
+  width: 220px;
+  height: 82px;
+  border-bottom-left-radius: 50px 50px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 50px;
+    background-color: transparent;
+    box-shadow: 10px -10px 0 10px $bg_color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: -45px;
+    width: 46px;
+    height: 40px;
+    border-top-right-radius: 50px;
+    background-color: transparent;
+    box-shadow: 10px -10px 0 10px $bg_color;
+  }
+}
+
+.decorationBottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 110px;
+  background-color: $bg_color;
+  border-radius: 50px 50px 0 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: transparent;
+    box-shadow: -10px 10px 0 10px $bg_color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: transparent;
+    box-shadow: 10px 10px 0 10px $bg_color;
+  }
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  grid-column: span 2;
+  width: 313px;
+  height: 68px;
+  padding: 0 64px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  align-items: center;
+  row-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 34px;
+}
+
+.titleSubtitle {
+  opacity: 0;
+  max-width: 480px;
+}
+
+.title {
+  font-size: 65px;
+  line-height: 65px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.freeGuide {
+  position: relative;
+  width: 100%;
+  max-width: 303px;
+  padding: 20px;
+  justify-self: flex-end;
+  opacity: 0;
+  background-color: rgba(#ffffff, 0.1);
+  border-radius: 30px;
+
+  &::before {
+    content: '';
+    top: -75px;
+    right: 30px;
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    background: url('../../assets/images/star.png') no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    content: '';
+    top: -30px;
+    right: -30px;
+    width: 166px;
+    height: 166px;
+    position: absolute;
+    background: url('../../assets/images/lightning.png') no-repeat;
+    background-size: cover;
+  }
+}
+
+.chip {
+  margin-bottom: 84px;
+}
+
+.animate {
+  animation: slideInFromBottom 1s 0.5s ease-out forwards;
+}
+
+@media (max-width: 1161px) {
+  .main {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .titleSubtitle {
+    max-width: 380px;
+  }
+
+  .decorationLeft {
+    height: 62px;
+
+    &::before {
+      width: 55px;
+      height: 50px;
+      box-shadow: -10px -20px 0 10px $bg_color;
+    }
+  }
+
+  .decorationRight {
+    height: 62px;
+
+    &::before {
+      width: 55px;
+      height: 50px;
+      box-shadow: 10px -20px 0 10px $bg_color;
+    }
+  }
+
+  .decorationBottom {
+    width: 350px;
+    height: 80px;
+  }
+
+  .button {
+    width: 250px;
+    padding: 0 32px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .freeGuide {
+    padding: 15px;
+    max-width: 270px;
+
+    &::before {
+      top: -55px;
+      width: 85px;
+      height: 85px;
+    }
+
+    &::after {
+      width: 136px;
+      height: 136px;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .chip {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 960px) {
+  .main {
+    padding-bottom: 480px;
+    margin-bottom: 330px;
+
+    &::after {
+      background-size: 987px 523px;
+      background-position: -130px 350px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0;
+  }
+
+  .titleSubtitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .freeGuide {
+    position: absolute;
+    top: 850px;
+    max-width: 340px;
+    padding: 25px;
+    order: 1;
+    background-color: rgba(255, 253, 253, 0.1);
+
+    &::before {
+      top: -45px;
+      right: 50px;
+      width: 90px;
+      height: 90px;
+      z-index: 2;
+    }
+
+    &::after {
+      width: 150px;
+      height: 150px;
+      z-index: 2;
+    }
+  }
+
+  .decorationBottom {
+    width: 365px;
+    height: 60px;
+
+    &::after {
+      right: -30px;
+    }
+
+    &::before {
+      left: -30px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    margin-top: 0;
+    padding-bottom: 450px;
+
+    &::after {
+      background-size: 987px 523px;
+      background-position: -205px 335px;
+    }
+  }
+
+  .decorationLeft {
+    width: 100px;
+    height: 82px;
+  }
+
+  .decorationRight {
+    width: 100px;
+    height: 82px;
+  }
+
+  .titleSubtitle {
+    max-width: 350px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    width: 230px;
+    height: 46px;
+  }
+
+  .freeGuide {
+    text-align: center;
+    top: 800px;
+
+    &::after {
+      width: 120px;
+      height: 120px;
+      top: 55px;
+      left: 48%;
+    }
+
+    &::before {
+      top: 75px;
+      left: 30%;
+    }
+  }
+
+  .chip {
+    margin: 0 auto;
+    margin-bottom: 130px;
+  }
+}
+
+@media (max-width: 560px) {
+  .main {
+    &::after {
+      background-size: 888px 470px;
+      background-position: -190px 340px;
+    }
+  }
+
+  .titleSubtitle {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding-bottom: 330px;
+
+    &::after {
+      background-size: 621px 329px;
+      background-position: center 280px;
+    }
+  }
+
+  .decorationLeft {
+    width: 70px;
+    border-bottom-right-radius: 30px 50px;
+
+    &::after {
+      height: 52px;
+    }
+
+    &::before {
+      width: 46px;
+      height: 45px;
+    }
+  }
+
+  .decorationRight {
+    width: 70px;
+    border-bottom-right-radius: 60px 10px;
+
+    &::after {
+      height: 52px;
+    }
+
+    &::before {
+      width: 46px;
+      height: 45px;
+    }
+  }
+
+  .decorationBottom {
+    width: 255px;
+    height: 60px;
+
+    &::after {
+      box-shadow: -11px 11px 0 10px $bg_color;
+    }
+  }
+
+  .titleSubtitle {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    margin-bottom: 5px;
+    font-size: 35px;
+    line-height: 30px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .button {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .freeGuide {
+    top: 610px;
+    max-width: 238px;
+    padding: 15px;
+
+    &::before {
+      width: 83px;
+      height: 83px;
+      left: 20%;
+    }
+
+    &::after {
+      width: 118px;
+      height: 118px;
+      top: 47px;
+      left: 40%;
+    }
+  }
+
+  .chip {
+    margin-bottom: 125px;
+  }
+}

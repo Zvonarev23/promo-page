@@ -1,0 +1,17 @@
+.btn {
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: $color_white;
+  color: $color_black;
+  transition: background-color $transition_speed $transition_animation;
+
+  &:hover {
+    background-color: $color_black;
+    color: $color_white;
+  }
+}

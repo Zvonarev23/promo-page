@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: GolosText, sans-serif;
+  background-color: $bg_color;
+  color: $color_white;
+}
+
+@font-face {
+  font-family: 'GolosText';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('GolosText-Regular'), local('GolosText-Regular'),
+    url('../fonts/GolosText-Regular.woff2') format('woff2'),
+    url('../fonts/GolosText-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GolosText';
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: local('GolosText-SemiBold'), local('GolosText-SemiBold'),
+    url('../fonts/GolosText-SemiBold.woff2') format('woff2'),
+    url('../fonts/GolosText-SemiBold.woff') format('woff');
+}
